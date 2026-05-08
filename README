@@ -1,6 +1,15 @@
 PROJECT TITLE: Predicting High Risk Substance Use Among Women of Childbearing Age Using Machine Learning: Insights from the 2023 TEDS-D Dataset. 
 
-DATASET: Treatment Episode Data Set - Discharges 2023 (TEDS-D 2023). 
+TEAM MEMBERS: Manal Bajwa, Shekinah Edwards, Ghazalpreet Randhawa
 
 This project was performed as part of George Mason University's HI 780: Data Mining in Health Care course taught by Dr. Abdul Hafeez in the spring 2026 semester.
+
+DATASET: Treatment Episode Data Set - Discharges 2023 (TEDS-D 2023). 
+
+DATASET LINK: https://www.samhsa.gov/data/data-we-collect/teds-treatment-episode-data-set/datafiles/teds-d-2023 
+
+Delimted version of dataset was downloaded.
+
+TOOLS: Google BigQuery, Weka, Python.
+
 
