@@ -2,7 +2,7 @@
 FROM python:3.11-slim
 
 # Create app directory
-WORKDIR /app
+WORKDIR /usr/app
 
 # Install system dependencies needed by google-cloud libraries (if any)
 RUN apt-get update && apt-get install -y --no-install-recommends \
@@ -21,4 +21,4 @@ COPY ..
 EXPOSE 8080
 
 # Default command — replace with your start command or entrypoint script
-ENV DBT_PROFILES_DIR=/app
+ENV DBT_PROFILES_DIR=/usr/app
