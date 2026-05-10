@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  dbt-dev:
+    build: .
+    container_name: dbt_container
+    volumes:
+      - .:/usr/app
+    env_file:
+      - .env
+    network_mode: "host"
+    # This keeps the container running so we can 'exec' into it
+    entrypoint: ["tail", "-f", "/dev/null"]
