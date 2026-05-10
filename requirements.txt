@@ -3,5 +3,4 @@ numpy
 matplotlib
 scikit-learn
 jupyter
-dbt-bigquery>=1.7.0
-dbt-core
+
