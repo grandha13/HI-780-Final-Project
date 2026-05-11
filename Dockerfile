@@ -1,24 +1,34 @@
-# Use official slim Python image
-FROM python:3.11-slim
+# Use official Python 3.12 slim image
+FROM python:3.12-slim
 
-# Create app directory
-WORKDIR /usr/app
+# Set working directory
+WORKDIR /app
 
-# Install system dependencies needed by google-cloud libraries (if any)
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
-    gcc \
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    curl \
+    gnupg \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy dependency list and install
+# Install Google Cloud SDK for Application Default Credentials
+RUN curl https://sdk.cloud.google.com | bash -s -- --disable-prompts --install-dir=/usr/local
+ENV PATH="/usr/local/google-cloud-sdk/bin:${PATH}"
+
+# Copy and install Python dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy application code
-COPY ..
+# Install Jupyter if not already in requirements.txt
+RUN pip install --no-cache-dir notebook
 
-# If this is a web app listening on a port, expose it (example 8080)
-EXPOSE 8080
+# Copy the notebook and any supporting files
+COPY . .
 
-# Default command — replace with your start command or entrypoint script
-ENV DBT_PROFILES_DIR=/usr/app
+# Expose Jupyter port
+EXPOSE 8888
+
+# Set environment variable for ADC (mount your credentials at runtime)
+ENV GOOGLE_APPLICATION_CREDENTIALS="/app/credentials/service-account.json"
+
+# Run Jupyter Notebook
+CMD ["jupyter", "notebook", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--NotebookApp.token=''"]
