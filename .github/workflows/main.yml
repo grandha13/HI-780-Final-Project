@@ -9,7 +9,7 @@ env:
   ACR_LOGIN_SERVER: tedsproject.azurecr.io
   IMAGE_NAME: tedsproject.azurecr.io/finalproject
   RESOURCE_GROUP: TEDS
-  CONTAINER_NAME: FinalProject
+  CONTAINER_NAME: finalproject
   LOCATION: norwayeast
 
 jobs:
