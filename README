@@ -4,6 +4,8 @@ TEAM MEMBERS: Manal Bajwa, Shekinah Edwards, Ghazalpreet Randhawa
 
 This project was performed as part of George Mason University's HI 780: Data Mining in Health Care course taught by Dr. Abdul Hafeez in the spring 2026 semester.
 
+The objective of this project is to predict high risk substance abuse among women of childbearing age using several data mining techniques: (1) clustering, (2) logistic regression, and (3) Random Forest.
+
 DATASET: Treatment Episode Data Set - Discharges 2023 (TEDS-D 2023). 
 
 DATASET LINK: https://www.samhsa.gov/data/data-we-collect/teds-treatment-episode-data-set/datafiles/teds-d-2023 
@@ -15,7 +17,7 @@ TOOLS: Google BigQuery, Weka, Python.
 SECTIONS OF THIS REPOSITORY:
 
 -Dataset Source provides a direct link to the raw dataset for download.
-=Cleaning_Data.sql is the SQL file utilized in BigQuery to clean the raw dataset and formulate a cleaned dataset.
+-Cleaning_Data.sql is the SQL file utilized in BigQuery to clean the raw dataset and formulate a cleaned dataset.
 -TEDS_Project_Final.csv is the final, cleaned dataset after data preprocessing in BigQuery.
 -TEDS_Project_Final.zip is the final, cleaned dataset after data preprocessing in BigQuery but in a ZIP file in case the csv file cannot be accessed.
 -ModelConstructionAnd_Analysis.ipynb contains the Python notebook and code to apply the machine learning models to the dataset.
