@@ -1,0 +1,4 @@
+# Google credentials
+*.json
+.gcloud/
+credentials/
