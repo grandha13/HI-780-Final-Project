@@ -10,7 +10,7 @@ env:
   IMAGE_NAME: tedsproject.azurecr.io/finalproject
   RESOURCE_GROUP: TEDS
   CONTAINER_NAME: FinalProject
-  LOCATION: chilecentral
+  LOCATION: norwayeast
 
 jobs:
   build-and-deploy:
