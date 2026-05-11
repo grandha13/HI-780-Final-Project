@@ -21,3 +21,7 @@ SECTIONS OF THIS REPOSITORY:
 -TEDS_Project_Final.csv is the final, cleaned dataset after data preprocessing in BigQuery.
 -TEDS_Project_Final.zip is the final, cleaned dataset after data preprocessing in BigQuery but in a ZIP file in case the csv file cannot be accessed.
 -ModelConstructionAnd_Analysis.ipynb contains the Python notebook and code to apply the machine learning models to the dataset.
+
+
+AZURE DEPLOYMENT:
+http://finalproject.norwayeast.azurecontainer.io:8888/tree?
